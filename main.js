@@ -32,7 +32,7 @@ const requestListener = function (req, res) {
 
   fs.writeFileSync("res.xml", xmlres);
 
-  res.end("Server is running!!!");
+  res.end(xmlres);
 };
 
 const server = http.createServer(requestListener);
