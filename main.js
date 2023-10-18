@@ -10,8 +10,8 @@ const requestListener = function (req, res) {
   function minvalue(xmldata) {
     let min = 10000;
     for (let list of xmldata.indicators.res) {
-      if (parseFloat(list.value) < min) {
-        min = parseFloat(list.value);
+      if (list.value < min) {
+        min = list.value;
       }
     }
     return min;
